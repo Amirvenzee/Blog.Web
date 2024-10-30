@@ -24,6 +24,7 @@ namespace Blog_DataLayer.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Relations
             foreach (var item in modelBuilder.Model.GetEntityTypes().SelectMany(x => x.GetForeignKeys()))
             {
                 item.DeleteBehavior = DeleteBehavior.Restrict;
