@@ -27,9 +27,9 @@ namespace Blog.Web
 			builder.Services.AddTransient<IMainPageService, MainPageService>();
 
             builder.Services.AddDbContext<BlogContext>(option => 
-			{
-				option.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionString"));
-			});
+			
+				option.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionString")));
+			
 
 			builder.Services.AddAuthorization(option =>
 			{
