@@ -25,7 +25,9 @@ namespace Blog.Web
 			builder.Services.AddTransient<IFileManager, FileManager>();
 			builder.Services.AddTransient<ICommentService, CommentService>();
 			builder.Services.AddTransient<IMainPageService, MainPageService>();
+             
 
+			//SQLserver
             builder.Services.AddDbContext<BlogContext>(option => 
 			
 				option.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionString")));
