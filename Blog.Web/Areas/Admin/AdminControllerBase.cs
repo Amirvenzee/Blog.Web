@@ -9,6 +9,12 @@ namespace Blog.Web.Areas.Admin
     [Authorize(Policy = "AdminPolicy")]
     public class AdminControllerBase : Controller
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="result"></param>
+        /// <param name="redirectPath"></param>
+        /// <returns></returns>
         protected IActionResult RedirectAndShowAlert(OperationResult result, IActionResult redirectPath)
         {
             var model = JsonConvert.SerializeObject(result);
